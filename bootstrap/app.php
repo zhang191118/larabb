@@ -24,8 +24,8 @@ $app = new Illuminate\Foundation\Application(
 | we will be able to resolve them when needed. The kernels serve the
 | incoming requests to this application from both the web and CLI.
 |
-*/
-
+ */
+require_once __DIR__ . '/helpers.php';
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
