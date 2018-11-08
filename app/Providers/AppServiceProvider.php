@@ -18,7 +18,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
-       // User::observe(UserObserver::class);
+        //User::observe(UserObserver::class);
+        \App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
         Topic::observe(TopicObserver::class);
     }
 
